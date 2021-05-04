@@ -1,0 +1,64 @@
+joint_state_controller:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 50  
+move_group:
+  controller_list:
+  - name: excavator_velocity_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - waist
+      - shoulder
+      - elbow
+      - wrist
+
+excavator_position_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - waist
+    - shoulder
+    - elbow
+    - wrist
+
+excavator_velocity_controller:
+  type: "velocity_controllers/JointTrajectoryController"
+  joints:
+    - waist
+    - shoulder
+    - elbow
+    - wrist
+  gains:
+    waist:    {p: 0.01,  d: 0, i: 0, i_clamp: 1}
+    shoulder: {p: 0.01,  d: 0, i: 0, i_clamp: 1}
+    elbow:    {p: 0.01,  d: 0, i: 0, i_clamp: 1}
+    wrist:    {p: 0.01,  d: 0, i: 0, i_clamp: 1}
+
+excavator_effort_controller:
+  type: "effort_controllers/JointTrajectoryController"
+  joints:
+    - waist
+    - shoulder
+    - elbow
+    - wrist
+  gains:
+    waist:    {p: 0.01,  d: 0, i: 0, i_clamp: 1}
+    shoulder: {p: 0.01,  d: 0, i: 0, i_clamp: 1}
+    elbow:    {p: 0.01,  d: 0, i: 0, i_clamp: 1}
+    wrist:    {p: 0.01,  d: 0, i: 0, i_clamp: 1}
+
+
+  #  Unused Joint Controller Parameters  - 
+  # constraints:
+  #   waist:
+  #     trajectory: 0.05
+  #     goal: 0.05
+  #   shoulder:
+  #     trajectory: 0.05
+  #     goal: 0.05
+  #   elbow:
+  #     trajectory: 0.05
+  #     goal: 0.05
+  #   wrist:
+  #     trajectory: 0.05
+  #     goal: 0.05
