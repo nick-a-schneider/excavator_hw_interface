@@ -22,15 +22,14 @@ class Excavator : public hardware_interface::RobotHW {
 
         const char   joint_hex_id[4] = {'L','X','P','T'}; 
         const uint16_t joint_zero[4] = {2122,3820,2950,2790};  // check frequently
-        double pos_cmd[4]; // Initial Conditions?
-        double vel_cmd[4]; // Initial Conditions?
-        double eff_cmd[4]; // Initial Conditions?
         double pos[4];
         double vel[4];
         double eff[4];
         
     public: 
-
+        double pos_cmd[4]; // Initial Conditions?
+        double vel_cmd[4]; // Initial Conditions?
+        double eff_cmd[4]; // Initial Conditions?
         void pose_callback(const arm_handler::arm_msg&);
         void read(void);
         void write(void);
