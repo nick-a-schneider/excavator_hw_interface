@@ -7,7 +7,7 @@
   <node name="hardware_interface"  pkg="excavator_hw_interface" type="excavator_hw_interface_node" output="screen"/>
 
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/"
-                    args="/excavator_velocity_controller
+                    args="/excavator_effort_controller
                           /joint_state_controller
                     "/>
     <!--args="
@@ -49,7 +49,7 @@
     <param name="allow_trajectory_execution"  value="true"/>
     <param name="max_safe_path_cost"          value="1"/>
     <param name="jiggle_fraction"             value="0.05" />
-    <param name="capabilities"                value="move_group/ExecuteTaskSolutionCapability"/><!--redundant-->
+    <param name="capabilities"                value="move_group/ExecuteTaskSolutionCapability"/><!--redundant?-->
     <param name="disable_capabilities"        value=""/>
 
 
