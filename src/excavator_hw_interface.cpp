@@ -2,11 +2,11 @@
 #include <arm_handler/arm_msg.h>
 #include <ros/console.h>
 
-    void Excavator::read(void){ // not called in main, used as passthrough to debug compile errors in node
-        for (int ii = 0; ii <=3; ii++){
-            pos[ii] = pos_cmd[ii] + 0.01;
-        }
-    }
+    // void Excavator::read(void){ // not called in main, used as passthrough to debug compile errors in node
+    //     for (int ii = 0; ii <=3; ii++){
+    //         pos[ii] = pos_cmd[ii] + 0.01;
+    //     }
+    // }
 
     void Excavator::write(void){
         arm_handler::arm_msg target_pose;
