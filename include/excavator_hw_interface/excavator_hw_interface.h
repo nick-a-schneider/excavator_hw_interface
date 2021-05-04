@@ -20,8 +20,8 @@ class Excavator : public hardware_interface::RobotHW {
         hardware_interface::VelocityJointInterface  jnt_vel_interface;
         hardware_interface::EffortJointInterface    jnt_eff_interface;
 
-        const char   joint_hex_id[4] = {'T','C','P','D'};      // NEEDS UPDATED
-        const uint16_t joint_zero[4] = {2000,2000,2000,2000};  // NEEDS UPDATED
+        const char   joint_hex_id[4] = {'L','X','P','T'}; 
+        const uint16_t joint_zero[4] = {2122,3820,2950,2790};  // check frequently
         double pos_cmd[4]; // Initial Conditions?
         double vel_cmd[4]; // Initial Conditions?
         double eff_cmd[4]; // Initial Conditions?

@@ -26,7 +26,7 @@ int main(int argc, char **argv){
     while (ros::ok()){
         const ros::Time time = ros::Time::now();
         const ros::Duration period = time - prev_time;
-        
+        for (int ii=0;ii<=3;ii++) ROS_WARN("pos cmd= %f  :  vel cmd= %f  :   eff cmd= %f  \n",pos_cmd[ii],vel_cmd[ii],eff_cmd[ii]);
         //robot.read();
         cm.update(time, period);
         robot.write();

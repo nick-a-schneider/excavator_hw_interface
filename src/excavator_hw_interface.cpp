@@ -12,7 +12,7 @@
         arm_handler::arm_msg target_pose;
         uint16_t tmp_goal;
         for (int ii = 0; ii <=3; ii++){
-            target_pose.data = 50*vel_cmd[ii] + 256;
+            target_pose.data = 50*eff_cmd[ii] + 256;
             target_pose.joint = joint_hex_id[ii];
             target_pose_publisher.publish(target_pose);
         }
