@@ -72,10 +72,10 @@ class Excavator : public hardware_interface::RobotHW {
             hardware_interface::JointHandle vel_handle_elbow(   jnt_state_interface.getHandle("elbow"),     &vel_cmd[2]);
             hardware_interface::JointHandle vel_handle_wrist(   jnt_state_interface.getHandle("wrist"),     &vel_cmd[3]);
 
-            jnt_vel_interface.registerHandle(pos_handle_waist);
-            jnt_vel_interface.registerHandle(pos_handle_shoulder);
-            jnt_vel_interface.registerHandle(pos_handle_elbow);    
-            jnt_vel_interface.registerHandle(pos_handle_wrist);
+            jnt_vel_interface.registerHandle(vel_handle_waist);
+            jnt_vel_interface.registerHandle(vel_handle_shoulder);
+            jnt_vel_interface.registerHandle(vel_handle_elbow);    
+            jnt_vel_interface.registerHandle(vel_handle_wrist);
 
             registerInterface(&jnt_vel_interface);
 
@@ -84,10 +84,10 @@ class Excavator : public hardware_interface::RobotHW {
             hardware_interface::JointHandle eff_handle_elbow(   jnt_state_interface.getHandle("elbow"),     &eff_cmd[2]);
             hardware_interface::JointHandle eff_handle_wrist(   jnt_state_interface.getHandle("wrist"),     &eff_cmd[3]);
 
-            jnt_eff_interface.registerHandle(pos_handle_waist);
-            jnt_eff_interface.registerHandle(pos_handle_shoulder);
-            jnt_eff_interface.registerHandle(pos_handle_elbow);    
-            jnt_eff_interface.registerHandle(pos_handle_wrist);
+            jnt_eff_interface.registerHandle(eff_handle_waist);
+            jnt_eff_interface.registerHandle(eff_handle_shoulder);
+            jnt_eff_interface.registerHandle(eff_handle_elbow);    
+            jnt_eff_interface.registerHandle(eff_handle_wrist);
 
             registerInterface(&jnt_eff_interface);
         }

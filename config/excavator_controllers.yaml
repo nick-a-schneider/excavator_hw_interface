@@ -61,18 +61,3 @@ excavator_effort_controller:
   stop_trajectory_duration: 0.5
   state_publish_rate:  25
 
-
-  #  Unused Joint Controller Parameters  - 
-  # constraints:
-  #   waist:
-  #     trajectory: 0.05
-  #     goal: 0.05
-  #   shoulder:
-  #     trajectory: 0.05
-  #     goal: 0.05
-  #   elbow:
-  #     trajectory: 0.05
-  #     goal: 0.05
-  #   wrist:
-  #     trajectory: 0.05
-  #     goal: 0.05
