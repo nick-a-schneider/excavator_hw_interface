@@ -22,9 +22,9 @@ class Excavator : public hardware_interface::RobotHW {
 
         const char   joint_hex_id[4] = {'L','X','P','T'}; 
         const uint16_t joint_zero[4] = {2122,3820,2950,2790};  // check frequently
-        double pos[4];
-        double vel[4];
-        double eff[4];
+        double pos[4] = {0,0,0,0};
+        double vel[4] = {0,0,0,0};
+        double eff[4] = {0,0,0,0};
         
     public: 
         double pos_cmd[4]; // Initial Conditions?

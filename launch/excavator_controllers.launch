@@ -4,7 +4,7 @@
 
   <rosparam file="$(find excavator_hw_interface)/config/excavator_controllers.yaml" command="load"/>
 
-  <node name="hardware_interface"  pkg="excavator_hw_interface" type="excavator_hw_interface_node" output="screen"/>
+  <node name="hardware_interface"  pkg="excavator_hw_interface" type="excavator_hw_interface_node" output="screen" launch-prefix="xterm -e"/>
 
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/"
                     args="/excavator_effort_controller
