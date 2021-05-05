@@ -1,2 +1,3 @@
 # excavator_hw_interface
-## testing
+* velocity and effort commands bug identified but not tested
+* TODO identify and fix wrist joint_state issues
